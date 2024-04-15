@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from "react";
-const MovieCard = ({index,movie}) => {
-    return(<div className="movie">
+const MovieCard = ({movie}) => {Z
+    return(<div classNameName="movie">
         <div>
             <p>{movie.Year}</p>
         </div>

@@ -17,18 +17,18 @@ const App = () => {
     useEffect(() => {
         searchMovies("Spiderman");
     },[])
-    return(<div className="app"><h1>Movie Land</h1>
-    <div className="search">
+    return(<div classNameName="app"><h1>Movie Land</h1>
+    <div classNameName="search">
         <input
             placeholder="search for movies" value={searchTerm} onChange={(e) => { setSearchTerm(e.target.value)}}
                     />
                     <img alt="search " onClick={() => searchMovies(searchTerm)} src="https://raw.githubusercontent.com/gist/adrianhajdin/997a8cdf94234e889fa47be89a4759f1/raw/f13e5a9a0d1e299696aa4a0fe3a0026fa2a387f7/search.svg"/>
                     </div>
-                    { movies.length >0 ? (<div className="container">Z
+                    { movies.length >0 ? (<div classNameName="container">Z
                         {movies.map((m,i) => (<MovieCard key={i} movie ={m}/>))}
                         
                         </div>) :
-                        (<div className="empty">
+                        (<div classNameName="empty">
                             <h2>No movies found</h2>
                         </div>)}
                     </div>);

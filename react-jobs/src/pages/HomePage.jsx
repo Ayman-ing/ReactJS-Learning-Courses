@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from "react-router-dom";
+
 import Hero from '../components/Hero.jsx';
 import HomeCards from '../components/HomeCards.jsx';
 import JobListings from '../components/JobListings.jsx';
@@ -10,7 +10,7 @@ function HomePage() {
     
     <Hero />
     <HomeCards/>
-    <JobListings/>
+    <JobListings isHome={true}/>
     <ViewAllJobs/>
     
 

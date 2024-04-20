@@ -10,7 +10,7 @@ const JobListing = ({job}) => {
   }
   console.log("RERENDERED")
   return (
-    <div  className="bg-white rounded-xl shadow-md relative">
+    <div  className="bg-white rounded-xl shadow-md relative p-8 hover:border border-gray-300 p-4 ">
                 <div className="p-4">
                   <div className="mb-6">
                     <div className="text-gray-500 my-2">{job.type}</div>

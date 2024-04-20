@@ -17,7 +17,7 @@ const JobListing = ({job}) => {
                     <h3 className="text-xxl font-bold">{job.title}</h3>
                   </div>
     
-                  <div className="mb-5">
+                  <div className="overflow-hidden break-words truncate-ellipsis mb-5">
                     {description} <button className='text-indigo-500 scale-95 mb-5 hover:text-indigo-700 hover:scale-100' onClick={() =>setShowFullDescription(prevState => !prevState)}>
                     {showFullDescription ? `Less` : ` More`}
                   </button>

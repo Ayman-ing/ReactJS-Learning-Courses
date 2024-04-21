@@ -25,7 +25,9 @@ const App = () => {
         return;
       };
     const deleteJob = async (id) =>{
-      fetch(`../api/jobs/${id}`,{method : 'DELETE'}
+      fetch(`../api/jobs/${id}`,{method : 'DELETE',headers :{
+        'Content-Type': 'application/json'
+      },}
       ).then((response) => {
         if(!response.ok){
           toast.error('there was an error while deleting the job!')

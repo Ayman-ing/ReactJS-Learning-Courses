@@ -195,34 +195,6 @@
         "contactEmail": "hhhhhhhhhhhhh@gmail.com",
         "contactPhone": "5555-5555-5555"
       }
-    },
-    {
-      "id": "4b3d",
-      "title": "hey whatsup",
-      "type": "Remote",
-      "description": "hhhhhhhhhhhhhh",
-      "salary": "Under $50K",
-      "location": "hhhhhhhhhhhhhhhh",
-      "company": {
-        "name": "hhhhhh",
-        "description": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-        "contactEmail": "hhhhhhhhhhhhh@gmail.com",
-        "contactPhone": "5555-5555-5555"
-      }
-    },
-    {
-      "id": "815b",
-      "title": "hey bro ",
-      "type": "Part-Time",
-      "description": "nothing here ",
-      "salary": "Under $50K",
-      "location": "Sfax TN",
-      "company": {
-        "name": "hhhhhh",
-        "description": "hhhhhhhhhhhhhhhhhhhhhhhhh",
-        "contactEmail": "hhhhhhhhhhhhh@gmail.com",
-        "contactPhone": "258014566"
-      }
     }
   ]
 }

@@ -6,18 +6,38 @@ import JobsPage from './pages/JobsPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 import JobPage, {jobLoader} from './pages/JobPage.jsx';
 import AddJobPage from './pages/AddJobPage.jsx';
-
+import { toast } from 'react-toastify';
 
 const App = () => {
   
    const  addNewJob = async (newJob) =>{
-        const res = await fetch("api/jobs",{method : "POST",headers :{
+        fetch("api/jobs",{method : "POST",headers :{
           'Content-Type': 'application/json'
         },
-        body : JSON.stringify(newJob) })
+        body : JSON.stringify(newJob) }).then((response) => {
+          if(!response.ok){
+            toast.error('there was an error while adding the job!')
+          }
+          else {
+            toast.success('job added successfully')
+          }
+        });
         return;
       };
-      
+    const deleteJob = async (id) =>{
+      fetch(`../api/jobs/${id}`,{method : 'DELETE'}
+      ).then((response) => {
+        if(!response.ok){
+          toast.error('there was an error while deleting the job!')
+        }
+        else {
+          toast.success('job deleted successfully')
+        }
+
+        }
+      );  
+      return;
+    };
      
   
   const router = createBrowserRouter(
@@ -26,7 +46,7 @@ const App = () => {
     <Route index element={<HomePage/>} />
     <Route path="/jobs" element={<JobsPage/>} />
     <Route path="*" element={<NotFoundPage/>} />
-    <Route path="/jobs/:id" element={<JobPage/>} loader={jobLoader} />
+    <Route path="/jobs/:id" element={<JobPage deleteJob={deleteJob}/>} loader={jobLoader}  />
     <Route path="/add-job" element={<AddJobPage addNewJob={addNewJob}/>} />
     </Route>
     ));
